@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Hashing</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Password Hashing</h1>
+        <form method="POST">
+            <label for="password">Enter Password:</label><br>
+            <input type="password" id="password" name="password"><br><br>
+            <input type="submit" value="Hash Password">
+        </form>
+        {% if hashed_password %}
+            <p >Hashed Password: {{ hashed_password }}</p>
+        {% endif %}
+    </div>
+</body>
+</html>
